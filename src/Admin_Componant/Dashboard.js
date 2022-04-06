@@ -1,6 +1,4 @@
 import React from "react";
-import axios from "axios";
-import { useState, useEffect } from "react";
 import Header from "./Header";
 import Menu from "./Menu";
 import Footer from "./Footer";
@@ -11,8 +9,8 @@ import { VendorSingup } from "../Login/VendorSingup";
 import { AddRole } from "../Role/AddRole";
 import { GetRole } from "../Role/GetRole";
 import { UpdateRole } from "../Role/UpdateRole";
-import { GetUsers } from "../User/GetUser";
-import { Userdetails } from "../User/User_details";
+import { GetUser } from "../User/GetUser";
+import { Userdetails } from "../User/Userdetails";
 import { Updateuser } from "../User/Updateuser";
 import { AddVendor } from "../Vendor/AddVendor";
 import { GetVendor } from "../Vendor/GetVendor";
@@ -30,10 +28,10 @@ import { UpdateSubCategory } from "../SubCategory/UpdateSubCategory";
 import { AddBrand } from "../Brand/AddBrand";
 import { GetBrand } from "../Brand/GetBrand";
 import { UpdateBrand } from "../Brand/UpdateBrand";
-import { Dashbord2 } from '../Admin_Componant/Dashboard2'
-import { Adduser } from "../User/AddUser";
+import { Dashboard2 } from '../Admin_Componant/Dashboard2'
+import { AddUser } from "../User/AddUser";
 
-export const Dashbord = () => {
+export const Dashboard = () => {
     // const [roleList, setroleList] = useState([]);
 
     // const getData = () => {
@@ -51,14 +49,14 @@ export const Dashbord = () => {
             <Header />
             <Menu />
             <Routes>
-                <Route path='/dashbord2' element={<Dashbord2 />}></Route>
+                <Route path='/dashbord2' element={<Dashboard2 />}></Route>
                 <Route path="/customersingup" element={<CustomerSingup />}></Route>
                 <Route path="/vendorsingup" element={<VendorSingup />}></Route>
                 <Route path="/addrole" element={<AddRole />}></Route>
                 <Route path="/getrole" element={<GetRole />}></Route>
                 <Route path="/getrole/updaterole/:id" element={<UpdateRole />}></Route>
-                <Route path='/adduser' element={<Adduser />}></Route>
-                <Route path="/dashbord/user" element={<GetUsers />}></Route>
+                <Route path='/adduser' element={<AddUser />}></Route>
+                <Route path="/dashbord/user" element={<GetUser />}></Route>
                 <Route path="/userdetails" element={<Userdetails />}></Route>
                 <Route path="/user/updateuser/:userId" element={<Updateuser />}></Route>
                 <Route path="/addvendor" element={<AddVendor />}></Route>

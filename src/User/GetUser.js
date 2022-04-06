@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 
-export const GetUsers = () => {
+export const GetUser = () => {
     const [userList, setuserList] = useState([]);
 
     const getData = () => {
@@ -39,7 +39,7 @@ export const GetUsers = () => {
                                 <th scope="col">#</th>
                                 <th scope="col">User Name</th>
                                 <th scope="col">Email</th>
-                                {/* <th scope="col">isActive</th> */}
+                                <th scope="col">isActive</th>
 
 
                             </tr>

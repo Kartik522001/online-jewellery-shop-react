@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const Dashbord2 = () => {
+export const Dashboard2 = () => {
     return (
         <div> <div className="position">
             {/* Content Wrapper. Contains page content */}

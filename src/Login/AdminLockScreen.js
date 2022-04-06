@@ -7,15 +7,15 @@ export const AdminLockScreen = () => {
             {/* Automatic element centering */}
             <div className="lockscreen-wrapper">
                 <div className="lockscreen-logo">
-                    <a href="../../index2.html"><b>OFS</b>   :  Online Furniture Shoping</a>
+                    <a href="../../index2.html">  :  Online Jewellery Shoping</a>
                 </div>
                 {/* User name */}
-                <div className="lockscreen-name">Harsh Modi</div>
+                <div className="lockscreen-name">Panchal Kartik</div>
                 {/* START LOCK SCREEN ITEM */}
                 <div className="lockscreen-item">
                     {/* lockscreen image */}
                     <div className="lockscreen-image">
-                        <img src="../../dist/img/user1-128x128.jpg" alt="User Image" />
+                        {/* <img src="../../dist/img/user1-128x128.jpg" alt="User Image" /> */}
                     </div>
                     {/* /.lockscreen-image */}
                     {/* lockscreen credentials (contains the form) */}

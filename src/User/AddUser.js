@@ -3,13 +3,13 @@ import { useState } from 'react'
 import axios from 'axios'
 
 
-export const Adduser = () => {
+export const AddUser = () => {
     const [firstName, setfirstName] = useState('');
     const [email, setemail] = useState('');
     const [password, setpassword] = useState('');
-    const [mobileNum, setmobailNum] = useState('');
-    const [gender, setgender] = useState('');
-    const [isActive, setisActive] = useState('');
+    // const [mobileNum, setmobailNum] = useState('');
+    // const [gender, setgender] = useState('');
+    // const [isActive, setisActive] = useState('');
 
 
 

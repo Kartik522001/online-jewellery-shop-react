@@ -10,7 +10,7 @@ export const VendorSingup = () => {
     const [email, setemail] = useState('')
     const [contactNum, setcontactNum] = useState('')
     const [password, setpassword] = useState('')
-    const [gender, setgender] = useState('')
+    // const [gender, setgender] = useState('')
 
 
 
@@ -197,7 +197,7 @@ export const VendorSingup = () => {
                                         </div>
 
                                         {/* Gendor */}
-                                        <div className="row ">
+                                        {/* <div className="row ">
                                             <label className="col-sm-2 col-form-label">Gender</label>
                                             <div className="col-sm-10">
                                                 <div className="form-check form-check-inline">
@@ -225,7 +225,7 @@ export const VendorSingup = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> */}
 
                                         {/* Role Name */}
                                         {/* Gendor */}

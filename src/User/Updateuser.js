@@ -11,9 +11,9 @@ export const Updateuser = () => {
     const [firstName, setfirstName] = useState(data.firstName);
     const [email, setemail] = useState(data.email);
     const [password, setpassword] = useState(data.password);
-    const [mobileNum, setmobailNum] = useState(data.mobileNum);
-    const [gender, setgender] = useState(data.gender);
-    const [isActive, setisActive] = useState(data.isActive);
+    // const [mobileNum, setmobailNum] = useState(data.mobileNum);
+    // const [gender, setgender] = useState(data.gender);
+    // const [isActive, setisActive] = useState(data.isActive);
 
     const getData = () => {
         axios.get(`http://localhost:4001/users/${id}`).then((res) => {
@@ -32,9 +32,9 @@ export const Updateuser = () => {
             firstName: firstName,
             email: email,
             password: password,
-            mobileNum: mobileNum,
-            gender: gender,
-            isActive: isActive,
+            // mobileNum: mobileNum,
+            // gender: gender,
+            // isActive: isActive,
         };
         e.preventDefault();
 
@@ -71,30 +71,30 @@ export const Updateuser = () => {
                         onChange={(e) => setpassword(e.target.value)}
                     />
 
-                    <label>Mobail Number</label>
+                    {/* <label>Mobail Number</label>
                     <input
                         type="text"
                         class="form-control"
                         defaultValue={data.mobileNum}
                         onChange={(e) => setmobailNum(e.target.value)}
-                    />
+                    /> */}
 
                     {/* Gendor */}
-                    <label>Gender</label>
+                    {/* <label>Gender</label>
                     <input
                         type="text"
                         class="form-control"
                         defaultValue={data.gender}
                         onChange={(e) => setgender(e.target.value)}
-                    />
+                    /> */}
 
-                    <label>isActive</label>
+                    {/* <label>isActive</label>
                     <input
                         type="text"
                         class="form-control"
                         defaultValue={data.isActive}
                         onChange={(e) => setisActive(e.target.value)}
-                    />
+                    /> */}
                 </div>
 
                 <button type="submit" class="btn btn-primary">

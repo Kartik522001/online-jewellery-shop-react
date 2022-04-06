@@ -18,12 +18,12 @@ export const GetVendor = () => {
     };
 
     const DeleteData = (_id) => {
-        {
-            axios.delete(`http://localhost:4001/vendor/${_id}`).then((res) => {
-                alert(res.status);
-                getData();
-            });
-        }
+
+        axios.delete(`http://localhost:4001/vendor/${_id}`).then((res) => {
+            alert(res.status);
+            getData();
+        });
+
     };
 
     useEffect(() => {
@@ -51,7 +51,7 @@ export const GetVendor = () => {
                     </thead>
                     <tbody>
                         {vendorList.map((vendor) => {
-                            if (vendor.isActive == true) {
+                            if (vendor.isActive === true) {
                                 return (
                                     <tr>
                                         <th scope="row">{vendor._id}</th>

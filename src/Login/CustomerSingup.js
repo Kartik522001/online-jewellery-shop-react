@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-// import logo from "./png/logo.png";
-// import logo2 from "./png/logo-small-bottom.png";
+import logo from "./png/logo.png";
+import logo2 from "./png/logo-small-bottom.png";
 
 
 export const CustomerSingup = () => {
@@ -12,7 +12,7 @@ export const CustomerSingup = () => {
     const [email, setemail] = useState('')
     const [contactNum, setcontactNum] = useState('')
     const [password, setpassword] = useState('')
-    const [gender, setgender] = useState('')
+    // const [gender, setgender] = useState('')
 
 
 
@@ -88,7 +88,7 @@ export const CustomerSingup = () => {
                         <div className="col-sm-12">
                             <form onSubmit={submit} className="md-float-material form-material">
                                 <div className="text-center">
-                                    {/* <img src={logo} alt="logo.png" /> */}
+                                    <img src={logo} alt="logo.png" />
                                 </div>
                                 <div className="auth-box card">
                                     <div className="card-block ">
@@ -199,7 +199,7 @@ export const CustomerSingup = () => {
                                         </div>
 
                                         {/* Gendor */}
-                                        <div className="row ">
+                                        {/* <div className="row ">
                                             <label className="col-sm-2 col-form-label">Gender</label>
                                             <div className="col-sm-10">
                                                 <div className="form-check form-check-inline">
@@ -227,7 +227,7 @@ export const CustomerSingup = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> */}
 
                                         {/* Role Name */}
                                         {/* Gendor */}
@@ -242,7 +242,7 @@ export const CustomerSingup = () => {
                                                         </span>
                                                         <span className="text-inverse">
                                                             I read and accept{" "}
-                                                            <a href="#">Terms &amp; Conditions.</a>
+                                                            <a href="/">Terms &amp; Conditions.</a>
                                                         </span>
                                                     </label>
                                                 </div>
@@ -255,7 +255,7 @@ export const CustomerSingup = () => {
                                                             <i className="cr-icon icofont icofont-ui-check txt-primary" />
                                                         </span>
                                                         <span className="text-inverse">
-                                                            Send me the <a href="#">Newsletter</a> weekly.
+                                                            Send me the <a href="/">Newsletter</a> weekly.
                                                         </span>
                                                     </label>
                                                 </div>
@@ -281,7 +281,7 @@ export const CustomerSingup = () => {
                                                 </p>
                                             </div>
                                             <div className="col-md-2">
-                                                {/* <img src={logo2} alt="small-logo.png" /> */}
+                                                <img src={logo2} alt="small-logo.png" />
                                             </div>
                                         </div>
                                     </div>
