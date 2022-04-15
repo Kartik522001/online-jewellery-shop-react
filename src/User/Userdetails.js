@@ -61,9 +61,9 @@ export const Userdetails = () => {
                                 return (
                                     <tr>
                                         <th scope="row">{user._id}</th>
-                                        <td>{user.firstName}</td>
+                                        <td>{user.userName}</td>
                                         <td>{user.email}</td>
-                                        <td>{user.role.roleName}</td>
+                                        <td>{user.role}</td>
                                         {/* <td>{user.gender}</td>
                                         <td>{user.mobileNum}</td>
                                         <td>{user.CreatedAt}</td> */}

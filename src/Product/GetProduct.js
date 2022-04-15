@@ -7,7 +7,7 @@ export const GetProduct = () => {
     const [productList, setproductList] = useState([]);
 
     const getData = async () => {
-        await axios.get("http://localhost:4001/products").then((res) => {
+        await axios.get("http://localhost:4001/productsall").then((res) => {
             console.log(res.data.data);
             setproductList(res.data.data);
         });
@@ -31,7 +31,7 @@ export const GetProduct = () => {
             <div className="content-wrapper card-body table-resposive col-md-10">
                 <h1>This is Product List</h1>
                 <h3 className="row-1 d-inline-flex">Products</h3>
-                <Link to="/addproduct" className="btn btn-info float-right">
+                <Link to="/admin/addproduct" className="btn btn-info float-right">
                     Add Product
                 </Link>
                 <table className="table table-hover table-striped">
@@ -41,7 +41,6 @@ export const GetProduct = () => {
                             <th scope="col">Product Name</th>
                             <th scope="col">Base Price </th>
                             <th scope="col">Category</th>
-                            <th scope="col">Sub-Category</th>
                             <th scope="col">Brand</th>
                         </tr>
                     </thead>
@@ -52,11 +51,10 @@ export const GetProduct = () => {
                                     <th scope="row">{product._id}</th>
                                     <td>{product.productName}</td>
                                     <td>{product.baseprice}</td>
-                                    <td>{product.category.categoryName}</td>
-                                    <td>{product.subcategory.subcategoryName}</td>
-                                    <td>{product.brand.brandName}</td>
+                                    <td>{product.category}</td>
+                                    <td>{product.brand}</td>
                                     <td><button onClick={() => DeleteData(product._id)} className='btn btn-danger'>DELETE</button>
-                                        <Link to={`/productlist/updateproduct/${product._id}`} className="btn btn-primary">UPDATE</Link>
+                                        <Link to={`/admin/productlist/updateproduct/${product._id}`} className="btn btn-primary">UPDATE</Link>
                                     </td>
                                 </tr>
                             );

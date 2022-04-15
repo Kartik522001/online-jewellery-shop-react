@@ -26,7 +26,7 @@ export const GetRole = () => {
             <div className="content-wrapper card-body table-resposive col-md-10">
                 <h1>This is Role List</h1>
                 <h3 className="row-1 d-inline-flex">Roles</h3>
-                <Link to="/addrole" className="btn btn-info float-right">
+                <Link to="/admin/addrole" className="btn btn-info float-right">
                     Add Role
                 </Link>
                 <table className="table table-hover table-striped">
@@ -44,7 +44,7 @@ export const GetRole = () => {
                                     <th scope="row">{role._id}</th>
                                     <td>{role.roleName}</td>
                                     <td><button onClick={() => DeleteData(role._id)} className='btn btn-danger'>DELETE</button>
-                                        <Link to={`/getrole/updaterole/${role._id}`} className="btn btn-primary">UPDATE</Link>
+                                        <Link to={`/admin/getrole/updaterole/${role._id}`} className="btn btn-primary">UPDATE</Link>
                                     </td>
                                 </tr>
                             );

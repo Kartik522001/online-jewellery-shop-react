@@ -32,7 +32,7 @@ export const GetUser = () => {
             <div className="content-wrapper card-body table-responsive p-0">
                 <div className="col-md-10">
                     <h3 className="row-1 d-inline-flex" > User</h3>
-                    <Link to='/adduser' className="btn btn-info float-right">Add user</Link>
+                    <Link to='/admin/adduser' className="btn btn-info float-right">Add user</Link>
                     <table className=" table table-hover">
                         <thead className="m-0 text-dark">
                             <tr>
@@ -49,7 +49,7 @@ export const GetUser = () => {
                                 return (
                                     <tr>
                                         <th scope="row">{user._id}</th>
-                                        <td>{user.firstName}</td>
+                                        <td>{user.userName}</td>
                                         <td>{user.email}</td>
 
 
@@ -62,10 +62,10 @@ export const GetUser = () => {
                                         <td>
                                             <button onClick={() => DeleteData(user._id)} className="btn btn-danger">DELETE</button>
 
-                                            <Link to={`/user/updateuser/${user._id}`} className="btn btn-primary">UPDATE</Link>
+                                            <Link to={`/admin/user/updateuser/${user._id}`} className="btn btn-primary">UPDATE</Link>
 
 
-                                            <Link to="/userdetails" className="btn btn-warning btn-round waves-effect" >View Details</Link>
+                                            <Link to="/admin/userdetails" className="btn btn-warning btn-round waves-effect" >View Details</Link>
 
                                         </td>
                                     </tr>

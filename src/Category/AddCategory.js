@@ -1,18 +1,20 @@
 import axios from "axios";
 import React, { useState } from "react";
-import Header from "../Admin_Componant/Header";
-import Menu from "../Admin_Componant/Menu";
+// import Header from "../Admin_Componant/Header";
+// import Menu from "../Admin_Componant/Menu";
 
 export const AddCategory = () => {
     const [categoryName, setcategoryName] = useState("");
+    const [img, setimg] = useState("");
 
     var Data = {
         categoryName: categoryName,
+        img: img
     };
 
     const submit = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:4001/categories", Data).then((res) => {
+        axios.post("http://localhost:4001/categorys", Data).then((res) => {
             console.log(res.status);
             console.log(res.data);
             alert("Category Added....");
@@ -20,8 +22,8 @@ export const AddCategory = () => {
     };
     return (
         <div>
-            <Header />
-            <Menu />
+            {/* <Header /> */}
+            {/* <Menu /> */}
             <div className=" content-wrapper card-body">
                 <h1>Add Category :- </h1>
 
@@ -33,6 +35,11 @@ export const AddCategory = () => {
                             class="form-control"
                             placeholder="Enter Product Category Name "
                             onChange={(e) => setcategoryName(e.target.value)}
+                        />
+                        <input
+                            type="text"
+                            class="form-control"
+                            onChange={(e) => setimg(e.target.value)}
                         />
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>

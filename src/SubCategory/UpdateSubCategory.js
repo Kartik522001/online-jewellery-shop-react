@@ -11,6 +11,7 @@ export const UpdateSubCategory = () => {
     const [subcategoryName, setsubcategoryName] = useState(data.subcategoryName);
     const [category, setcategory] = useState(data.category);
     const [isActive, setisActive] = useState(data.isActive);
+    const [img, setimg] = useState(data.img);
 
     const getData = () => {
         axios.get(`http://localhost:4001/subcategories/${id}`).then((res) => {
@@ -28,6 +29,7 @@ export const UpdateSubCategory = () => {
             subcategoryName: subcategoryName,
             category: category,
             isActive: isActive,
+            img: img
         };
         e.preventDefault();
 
@@ -59,7 +61,17 @@ export const UpdateSubCategory = () => {
                             defaultValue={data.category}
                             onChange={(e) => setcategory(e.target.value)}
                         />
-                    </div><div className=" form-group">
+                    </div>
+                    <div className=" form-group">
+                        <label>Category Img</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            defaultValue={data.category}
+                            onChange={(e) => setimg(e.target.value)}
+                        />
+                    </div>
+                    <div className=" form-group">
                         <label>isActive</label>
                         <input
                             type="text"

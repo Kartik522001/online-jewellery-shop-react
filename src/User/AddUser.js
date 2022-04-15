@@ -4,7 +4,7 @@ import axios from 'axios'
 
 
 export const AddUser = () => {
-    const [firstName, setfirstName] = useState('');
+    const [userName, setusername] = useState('');
     const [email, setemail] = useState('');
     const [password, setpassword] = useState('');
     // const [mobileNum, setmobailNum] = useState('');
@@ -14,9 +14,10 @@ export const AddUser = () => {
 
 
     var Data = {
-        firstName: firstName,
+        userName: userName,
         email: email,
         password: password,
+        role: '6220d6c79030e863cdb5ddc2'
         // mobileNum: mobileNum,
         // gender: gender,
         // isActive: isActive,
@@ -38,7 +39,7 @@ export const AddUser = () => {
                     <input
                         type="text"
                         class="form-control"
-                        onChange={(e) => setfirstName(e.target.value)}
+                        onChange={(e) => setusername(e.target.value)}
                     />
 
                     <label>Email</label>

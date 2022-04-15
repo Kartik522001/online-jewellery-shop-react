@@ -29,7 +29,7 @@ export default class Menu extends Component {
                                 {/* Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library */}
                                 <li className="nav-item has-treeview menu-open">
-                                    <Link to="/dashbord2" className="nav-link active">
+                                    <Link to="/admin/dashbord2" className="nav-link active">
                                         <i className="nav-icon fas fa-tachometer-alt" />
                                         <p>
                                             Dashboard
@@ -38,7 +38,7 @@ export default class Menu extends Component {
                                     </Link>
                                 </li>
                                 <li class="nav-item">
-                                    <Link to="/getrole" class="nav-link active">
+                                    <Link to="/admin/getrole" class="nav-link active">
                                         <i class="nav-icon fas fa-th"></i>
                                         <p>
                                             ROLE
@@ -46,7 +46,7 @@ export default class Menu extends Component {
                                     </Link>
                                 </li>
                                 <li class="nav-item">
-                                    <Link to="/vendorrequest" class="nav-link active">
+                                    <Link to="/admin/vendorrequest" class="nav-link active">
                                         <i class="nav-icon fas fa-th"></i>
                                         <p>
                                             Vendor Requests
@@ -59,7 +59,7 @@ export default class Menu extends Component {
                                 <li className="nav-header">ADD DATA</li>
 
                                 <li className="nav-item has-treeview">
-                                    <Link to="/dashbord" className="nav-link">
+                                    <Link to="/admin/dashbord" className="nav-link">
                                         <i className="nav-icon far fa-envelope" />
                                         <p>
                                             Role
@@ -68,13 +68,13 @@ export default class Menu extends Component {
                                     </Link>
                                     <ul className="nav nav-treeview">
                                         <li className="nav-item">
-                                            <Link to="/dashbord/user" className="nav-link">
+                                            <Link to="/admin/dashbord/user" className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>User</p>
                                             </Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link to="/getvendor" className="nav-link">
+                                            <Link to="/admin/getvendor" className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>Vendor</p>
                                             </Link>
@@ -83,7 +83,7 @@ export default class Menu extends Component {
                                     </ul>
                                 </li>
                                 <li className="nav-item has-treeview">
-                                    <Link to="/dashbord" className="nav-link">
+                                    <Link to="/admin/dashbord" className="nav-link">
                                         <i className="nav-icon far fa-envelope" />
                                         <p>
                                             ADD
@@ -92,55 +92,55 @@ export default class Menu extends Component {
                                     </Link>
                                     <ul className="nav nav-treeview">
                                         <li className="nav-item">
-                                            <Link to="/addvendor" className="nav-link">
+                                            <Link to="/admin/addvendor" className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>Vendor</p>
                                             </Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link to="/addproduct" className="nav-link">
+                                            <Link to="/admin/addproduct" className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>Product</p>
                                             </Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link to="/addcategories" className="nav-link">
+                                            <Link to="/admin/addcategories" className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>Category</p>
                                             </Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link to="/addsubcategory" className="nav-link">
+                                            <Link to="/admin/addsubcategory" className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>Sub-Category</p>
                                             </Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link to="/addbrand" className="nav-link">
+                                            <Link to="/admin/addbrand" className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>Brand</p>
                                             </Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link to="/addvendor" className="nav-link">
+                                            <Link to="/admin/addvendor" className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>City</p>
                                             </Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link to="/addvendor" className="nav-link">
+                                            <Link to="/admin/addvendor" className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>State</p>
                                             </Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link to="/addvendor" className="nav-link">
+                                            <Link to="/admin/addvendor" className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>Order</p>
                                             </Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link to="/addvendor" className="nav-link">
+                                            <Link to="/admin/addvendor" className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>Offer</p>
                                             </Link>
@@ -148,7 +148,7 @@ export default class Menu extends Component {
                                     </ul>
                                 </li>
                                 <li className="nav-item has-treeview">
-                                    <Link to="/productlist" className="nav-link">
+                                    <Link to="/admin/productlist" className="nav-link">
                                         <i className="nav-icon fas fa-book" />
                                         <p>
                                             Product
@@ -157,7 +157,7 @@ export default class Menu extends Component {
                                     </Link>
                                     <ul className="nav nav-treeview">
                                         <li className="nav-item">
-                                            <Link to='/productlist' className="nav-link">
+                                            <Link to='/admin/productlist' className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>Product List</p>
                                             </Link>
@@ -166,7 +166,7 @@ export default class Menu extends Component {
                                     </ul>
                                 </li>
                                 <li className="nav-item has-treeview">
-                                    <Link to="/categorylist" className="nav-link">
+                                    <Link to="/admin/categorylist" className="nav-link">
                                         <i className="nav-icon fas fa-book" />
                                         <p>
                                             Category
@@ -175,7 +175,7 @@ export default class Menu extends Component {
                                     </Link>
                                     <ul className="nav nav-treeview">
                                         <li className="nav-item">
-                                            <Link to='/categorylist' className="nav-link">
+                                            <Link to='/admin/categorylist' className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>Category List</p>
                                             </Link>
@@ -184,7 +184,7 @@ export default class Menu extends Component {
                                     </ul>
                                 </li>
                                 <li className="nav-item has-treeview">
-                                    <Link to="/getsubcategory" className="nav-link">
+                                    <Link to="/admin/getsubcategory" className="nav-link">
                                         <i className="nav-icon fas fa-book" />
                                         <p>
                                             Sub-Category
@@ -193,7 +193,7 @@ export default class Menu extends Component {
                                     </Link>
                                     <ul className="nav nav-treeview">
                                         <li className="nav-item">
-                                            <Link to='/getsubcategory' className="nav-link">
+                                            <Link to='/admin/getsubcategory' className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>Sub-Category List</p>
                                             </Link>
@@ -202,7 +202,7 @@ export default class Menu extends Component {
                                     </ul>
                                 </li>
                                 <li className="nav-item has-treeview">
-                                    <Link to="/getbrand" className="nav-link">
+                                    <Link to="/admin/getbrand" className="nav-link">
                                         <i className="nav-icon fas fa-book" />
                                         <p>
                                             Brand
@@ -211,7 +211,7 @@ export default class Menu extends Component {
                                     </Link>
                                     <ul className="nav nav-treeview">
                                         <li className="nav-item">
-                                            <Link to='/getbrand' className="nav-link">
+                                            <Link to='/admin/getbrand' className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>Brand List</p>
                                             </Link>
@@ -219,85 +219,6 @@ export default class Menu extends Component {
 
                                     </ul>
                                 </li>
-                                <li className="nav-item has-treeview">
-                                    <Link to="/" className="nav-link">
-                                        <i className="nav-icon far fa-plus-square" />
-                                        <p>
-                                            Extras
-                                            <i className="fas fa-angle-left right" />
-                                        </p>
-                                    </Link>
-                                    <ul className="nav nav-treeview">
-                                        <li className="nav-item">
-                                            <Link to="pages/examples/login.html" className="nav-link">
-                                                <i className="far fa-circle nav-icon" />
-                                                <p>Login</p>
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link to="pages/examples/register.html" className="nav-link">
-                                                <i className="far fa-circle nav-icon" />
-                                                <p>Register</p>
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link to="pages/examples/forgot-password.html" className="nav-link">
-                                                <i className="far fa-circle nav-icon" />
-                                                <p>Forgot Password</p>
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link to="pages/examples/recover-password.html" className="nav-link">
-                                                <i className="far fa-circle nav-icon" />
-                                                <p>Recover Password</p>
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link to="pages/examples/lockscreen.html" className="nav-link">
-                                                <i className="far fa-circle nav-icon" />
-                                                <p>Lockscreen</p>
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link to="pages/examples/legacy-user-menu.html" className="nav-link">
-                                                <i className="far fa-circle nav-icon" />
-                                                <p>Legacy User Menu</p>
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link to="pages/examples/language-menu.html" className="nav-link">
-                                                <i className="far fa-circle nav-icon" />
-                                                <p>Language Menu</p>
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link to="pages/examples/404.html" className="nav-link">
-                                                <i className="far fa-circle nav-icon" />
-                                                <p>Error 404</p>
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link to="pages/examples/500.html" className="nav-link">
-                                                <i className="far fa-circle nav-icon" />
-                                                <p>Error 500</p>
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link to="pages/examples/pace.html" className="nav-link">
-                                                <i className="far fa-circle nav-icon" />
-                                                <p>Pace</p>
-                                            </Link>
-                                        </li>
-
-                                        <li className="nav-item">
-                                            <Link to="starter.html" className="nav-link">
-                                                <i className="far fa-circle nav-icon" />
-                                                <p>Starter Page</p>
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </li>
-
 
 
                             </ul>

@@ -30,6 +30,9 @@ import { GetBrand } from "../Brand/GetBrand";
 import { UpdateBrand } from "../Brand/UpdateBrand";
 import { Dashboard2 } from '../Admin_Componant/Dashboard2'
 import { AddUser } from "../User/AddUser";
+import { GetOrder } from "./Order/GetOrder";
+import { OrderDetails } from "./Order/OrderDetails";
+
 
 export const Dashboard = () => {
     // const [roleList, setroleList] = useState([]);
@@ -87,6 +90,8 @@ export const Dashboard = () => {
                 <Route path="/addbrand" element={<AddBrand />}></Route>
                 <Route path='/getbrand' element={<GetBrand />}></Route>
                 <Route path='/getbrand/updatebrand/:id' element={<UpdateBrand />}></Route>
+                <Route path='/getorder' element={<GetOrder />} />
+                <Route path='/getorder/getorderdetails/:id' element={<OrderDetails />}></Route>
 
             </Routes>
             <Footer />

@@ -5,11 +5,13 @@ export const AddSubCategory = () => {
     const [subcategoryName, setsubcategoryName] = useState("");
     const [category, setcategory] = useState("");
     const [isActive, setisActive] = useState("");
+    const [img, setimg] = useState("");
 
     var Data = {
         subcategoryName: subcategoryName,
         category: category,
         isActive: isActive,
+        img: img
     };
 
     const submit = (e) => {
@@ -43,7 +45,17 @@ export const AddSubCategory = () => {
                         placeholder="Enter Product Category Id "
                         onChange={(e) => setcategory(e.target.value)}
                     />
-                </div><div className=" form-group">
+                </div>
+                <div className=" form-group">
+                    <label>Category Img</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter Product Category Id "
+                        onChange={(e) => setimg(e.target.value)}
+                    />
+                </div>
+                <div className=" form-group">
                     <label>isActive</label>
                     <input
                         type="text"
