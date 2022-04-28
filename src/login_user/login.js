@@ -57,7 +57,7 @@ const Login = ({ setLoginUser }) => {
 
             // history.push('/');
         }).catch((err) => {
-            alert('Error')
+            alert('Invalid Credentials')
         })
     }
 

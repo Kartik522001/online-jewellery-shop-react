@@ -39,7 +39,7 @@ export const GetUser = () => {
                                 <th scope="col">#</th>
                                 <th scope="col">User Name</th>
                                 <th scope="col">Email</th>
-                                <th scope="col">isActive</th>
+                                {/* <th scope="col">isActive</th> */}
 
 
                             </tr>
@@ -53,9 +53,9 @@ export const GetUser = () => {
                                         <td>{user.email}</td>
 
 
-                                        <td>{
+                                        {/* <td>{
                                             user.isActive ? "Active" : "DisActive"
-                                        }</td>
+                                        }</td> */}
                                         {/* <td>{user.role}</td> */}
                                         {/* <td>{user.isActive}</td> */}
 

@@ -80,20 +80,8 @@ const Details = () => {
                         <h3 className="font-weight-semi-bold mb-4">${productList.baseprice}</h3>
                         {/* <p className="mb-4">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc invidunt ipsum et, labore clita lorem magna lorem ut. Erat lorem duo dolor no sea nonumy. Accus labore stet, est lorem sit diam sea et justo, amet at lorem et eirmod ipsum diam et rebum kasd rebum.</p> */}
                         <div className="d-flex align-items-center mb-4 pt-2">
-                            <div className="input-group quantity mr-3" style={{ width: "130px" }}>
-                                <div className="input-group-btn">
-                                    <button className="btn btn-primary btn-minus" >
-                                        <i className="fa fa-minus"></i>
-                                    </button>
-                                </div>
-                                <input type="text" className="form-control bg-secondary text-center" value="1" />
-                                <div className="input-group-btn">
-                                    <button className="btn btn-primary btn-plus">
-                                        <i className="fa fa-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <button className="btn btn-primary px-3"><i className="fa fa-shopping-cart mr-1"></i> Add To Cart</button>
+
+                            <Link to={`/cart/${productList._id}`} className="btn btn-primary px-3"><i className="fa fa-shopping-cart mr-1"></i>Add To Cart</Link>
                         </div>
                         <div className="d-flex pt-2">
                             <p className="text-dark font-weight-medium mb-0 mr-2">Share on:</p>

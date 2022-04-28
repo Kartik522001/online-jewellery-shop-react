@@ -18,7 +18,7 @@ export const UpdateProduct = () => {
     const [img, setimg] = useState(data.img);
 
     const getData = () => {
-        axios.get(`http://localhost:4001/products/${id}`).then((res) => {
+        axios.get(`http://localhost:4001/productslist/${id}`).then((res) => {
             setData(res.data.data);
             console.log("Default value --", res.data.data);
             console.log('category Id', res.data.data.category);
@@ -26,7 +26,7 @@ export const UpdateProduct = () => {
             console.log('brand Id', res.data.data.brand);
         });
 
-        axios.get(`http://localhost:4001/categories`).then((res) => {
+        axios.get(`http://localhost:4001/categorys`).then((res) => {
             setcategoryList(res.data.data);
             // console.log("category data--", res.data.data);
         });
@@ -94,8 +94,7 @@ export const UpdateProduct = () => {
     return (
         <div className=" content-wrapper card-body">
 
-            {data.category !== undefined &&
-                data.subcategory !== undefined ? (
+            {data.category !== undefined ? (
                 <form onSubmit={update}>
                     <div className=" form-group">
                         <label>Product Name</label>

@@ -32,6 +32,7 @@ import { Dashboard2 } from '../Admin_Componant/Dashboard2'
 import { AddUser } from "../User/AddUser";
 import { GetOrder } from "./Order/GetOrder";
 import { OrderDetails } from "./Order/OrderDetails";
+import { GetContent } from './Order/GetContent';
 
 
 export const Dashboard = () => {
@@ -91,6 +92,7 @@ export const Dashboard = () => {
                 <Route path='/getbrand' element={<GetBrand />}></Route>
                 <Route path='/getbrand/updatebrand/:id' element={<UpdateBrand />}></Route>
                 <Route path='/getorder' element={<GetOrder />} />
+                <Route path='/getcontent' element={<GetContent />} />
                 <Route path='/getorder/getorderdetails/:id' element={<OrderDetails />}></Route>
 
             </Routes>

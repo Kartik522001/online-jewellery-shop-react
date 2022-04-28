@@ -45,7 +45,7 @@ export default class Menu extends Component {
                                         </p>
                                     </Link>
                                 </li>
-                                <li class="nav-item">
+                                {/* <li class="nav-item">
                                     <Link to="/admin/vendorrequest" class="nav-link active">
                                         <i class="nav-icon fas fa-th"></i>
                                         <p>
@@ -53,7 +53,7 @@ export default class Menu extends Component {
                                             <span class="right badge badge-danger">New</span>
                                         </p>
                                     </Link>
-                                </li>
+                                </li> */}
 
 
                                 <li className="nav-header">ADD DATA</li>
@@ -73,12 +73,12 @@ export default class Menu extends Component {
                                                 <p>User</p>
                                             </Link>
                                         </li>
-                                        <li className="nav-item">
+                                        {/* <li className="nav-item">
                                             <Link to="/admin/getvendor" className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>Vendor</p>
                                             </Link>
-                                        </li>
+                                        </li> */}
 
                                     </ul>
                                 </li>
@@ -183,7 +183,7 @@ export default class Menu extends Component {
 
                                     </ul>
                                 </li>
-                                <li className="nav-item has-treeview">
+                                {/* <li className="nav-item has-treeview">
                                     <Link to="/admin/getsubcategory" className="nav-link">
                                         <i className="nav-icon fas fa-book" />
                                         <p>
@@ -200,7 +200,7 @@ export default class Menu extends Component {
                                         </li>
 
                                     </ul>
-                                </li>
+                                </li> */}
                                 <li className="nav-item has-treeview">
                                     <Link to="/admin/getbrand" className="nav-link">
                                         <i className="nav-icon fas fa-book" />
@@ -214,6 +214,24 @@ export default class Menu extends Component {
                                             <Link to='/admin/getbrand' className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>Brand List</p>
+                                            </Link>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li className="nav-item has-treeview">
+                                    <Link to="/admin/getcontent" className="nav-link">
+                                        <i className="nav-icon fas fa-book" />
+                                        <p>
+                                            Contect Details
+                                            <i className="fas fa-angle-left right" />
+                                        </p>
+                                    </Link>
+                                    <ul className="nav nav-treeview">
+                                        <li className="nav-item">
+                                            <Link to='/admin/productlist' className="nav-link">
+                                                <i className="far fa-circle nav-icon" />
+                                                <p>Order List</p>
                                             </Link>
                                         </li>
 

@@ -50,9 +50,11 @@ export const UpdateCategory = () => {
                             defaultValue={data.categoryName}
                             onChange={(e) => setcategoryName(e.target.value)}
                         />
+                        <br />
                         <input
                             type="text"
                             class="form-control"
+                            defaultValue={data.img}
                             onChange={(e) => setimg(e.target.value)}
                         />
                     </div>

@@ -13,6 +13,12 @@ import Details from './Pages/Details';
 import Cart from './Pages/cart'
 import Checkout from './Pages/checkout'
 import ShopDetail from './Pages/ShopDetails'
+import Ring from './User_Componant/Ring'
+import Chain from './User_Componant/Chain'
+import Bracelet from './User_Componant/Bracelet'
+import Necklace from './User_Componant/Necklace'
+import HandChain from './User_Componant/HandChain'
+import Diamond from './User_Componant/Diamond'
 import { useEffect, useState } from "react";
 
 function App() {
@@ -43,8 +49,15 @@ function App() {
                 <Route path='/shop' element={<Shop />}></Route>
                 <Route path='/detail/:productId' element={<Details />}></Route>
                 <Route path='/shopDetail/:categoryId' element={<ShopDetail />} />
-                <Route path='/cart' element={<Cart />}></Route>
-                <Route path='/checkout' element={<Checkout />}> </Route>
+                <Route path='/cart/:productId' element={<Cart />}></Route>
+                <Route path='/checkout/:productId' element={<Checkout />}> </Route>
+                <Route path='/Ring' element={<Ring />} />
+                <Route path='/Chain' element={<Chain />} />
+                <Route path='/Bracelet' element={<Bracelet />} />
+                <Route path='/Necklace' element={<Necklace />} />
+                <Route path='/HandChain' element={<HandChain />} />
+                <Route path='/Diamond' element={<Diamond />} />
+
             </Routes>
 
         </div>
