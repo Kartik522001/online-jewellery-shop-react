@@ -1,9 +1,27 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link, useParams } from 'react-router-dom'
+import axios from 'axios';
 import '../_css/style.min.css'
 import '../_css/style.css'
+import { useDispatch } from 'react-redux';
 
 const NavBar = () => {
+
+    var [email, setemail] = useState('')
+
+    const getlocalStorageData = async () => {
+        var email = localStorage.getItem("email")
+        email = email;
+        // alert(email)
+    }
+
+
+
+    useEffect(() => {
+        setemail(localStorage.getItem("email"))
+        getlocalStorageData()
+    })
+
     return (
         <>
 
@@ -121,7 +139,8 @@ const NavBar = () => {
                             <Link to="/content" className="nav-item nav-link">Contact</Link>
                         </div>
                         <div className="navbar-nav ml-auto py-0">
-                            <Link to="/login" className="nav-item nav-link">Login</Link>
+                            <Link to="/logout" className="nav-item nav-link">Logout</Link>
+                            <Link to="/login" className="nav-item nav-link">{email ? <span className="text-dark"> {email} </span> : <span> login </span>}</Link>
                             <Link to="/register" className="nav-item nav-link">Register</Link>
                         </div>
                     </div>

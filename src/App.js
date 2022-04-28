@@ -20,6 +20,7 @@ import Necklace from './User_Componant/Necklace'
 import HandChain from './User_Componant/HandChain'
 import Diamond from './User_Componant/Diamond'
 import { useEffect, useState } from "react";
+import Logout from './User_Componant/Logout'
 
 function App() {
     const [isLoading, setisLoading] = useState(false);
@@ -57,6 +58,7 @@ function App() {
                 <Route path='/Necklace' element={<Necklace />} />
                 <Route path='/HandChain' element={<HandChain />} />
                 <Route path='/Diamond' element={<Diamond />} />
+                <Route path='/logout' element={<Logout />} />
 
             </Routes>
 
