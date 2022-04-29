@@ -9,9 +9,11 @@ const Cart = () => {
     // var id = useParams().userId;
     var id = localStorage.getItem('userId')
     // console.log("Id--", id);
-
+    var total = 0;
+    var baseprice;
     var [cartList, setcart] = useState([]);
 
+    // const total = cartList.reduce((total, item) => total + item.baseprice)
 
     const getData = () => {
         axios.get(`http://localhost:4001/cartone/${id}`).then((res) => {
@@ -19,6 +21,12 @@ const Cart = () => {
             setcart(res.data.data);
         });
     };
+
+
+    cartList.map((car) => {
+        baseprice = car.baseprice
+        total = baseprice + total
+    })
 
 
     useEffect(() => {
@@ -91,7 +99,7 @@ const Cart = () => {
 
                                             <> */}
                                     <tr>
-                                        <td class="align-middle">${ }</td>
+                                        <td class="align-middle">${total}</td>
                                     </tr>
                                     {/* </>
                                         )
@@ -102,7 +110,7 @@ const Cart = () => {
                             <div class="card-footer border-secondary bg-transparent">
                                 <div class="d-flex justify-content-between mt-2">
                                     <h5 class="font-weight-bold">Total</h5>
-                                    <h5 class="font-weight-bold">${ }</h5>
+                                    <h5 class="font-weight-bold">${total}</h5>
                                 </div>
                                 <Link to={`/checkout/`} class="btn btn-block btn-primary my-3 py-3">Proceed To Checkout</Link>
                             </div>
