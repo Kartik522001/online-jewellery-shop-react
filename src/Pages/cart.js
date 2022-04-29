@@ -17,8 +17,6 @@ const Cart = () => {
         axios.get(`http://localhost:4001/cartone/${id}`).then((res) => {
             // console.log(res.data.data);
             setcart(res.data.data);
-
-
         });
     };
 
@@ -88,16 +86,16 @@ const Cart = () => {
                             <div class="card-body">
                                 <div class="d-flex justify-content-between mb-3 pt-1">
                                     <h6 class="font-weight-medium">Subtotal</h6>
-                                    {cartList.map((cart1) => {
+                                    {/* {cartList.map((cart1) => {
                                         return (
 
-                                            <>
-                                                <tr>
-                                                    <td class="align-middle">${ }</td>
-                                                </tr>
-                                            </>
+                                            <> */}
+                                    <tr>
+                                        <td class="align-middle">${ }</td>
+                                    </tr>
+                                    {/* </>
                                         )
-                                    })}
+                                    })} */}
                                 </div>
 
                             </div>
