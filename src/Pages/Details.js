@@ -41,9 +41,6 @@ const Details = () => {
                     </div>
                 </div>
             </div>
-            {/* {productList.join((product) => {
-                return (
-                    <> */}
             <div className="container-fluid py-5">
                 <div className="row px-xl-5">
 

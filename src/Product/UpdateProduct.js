@@ -94,59 +94,59 @@ export const UpdateProduct = () => {
     return (
         <div className=" content-wrapper card-body">
 
-            {data.category !== undefined ? (
-                <form onSubmit={update}>
-                    <div className=" form-group">
-                        <label>Product Name</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            defaultValue={data.productName}
-                            onChange={(e) => setproductName(e.target.value)}
-                        />
-                    </div>
-                    <div className=" form-group">
-                        <label>Base Price</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            defaultValue={data.baseprice}
-                            onChange={(e) => setBaseprice(e.target.value)}
-                        />
-                    </div>
-                    <div className=" form-group" data-select2-id="55">
-                        <label>Category</label>
-                        <select
-                            className="form-control select2 select2-hidden-accessible"
-                            data-select2-id="9"
-                            tabindex="-1"
-                            aria-hidden="true"
-                            onChange={(e) => CategoryListOnChangeHandler(e)}
-                        >
-                            {categoryList.map((category) => {
-                                if (category._id !== data.category._id) {
-                                    return (
-                                        <option
-                                            value={category._id}
-                                        >
-                                            {category.categoryName}
-                                        </option>
-                                    );
-                                }
-                                else {
-                                    return (
-                                        <option
-                                            selected
-                                            value={category._id}
-                                        >
-                                            {category.categoryName}
-                                        </option>
-                                    )
-                                }
-                            })}
-                        </select>
-                    </div>
-                    {/* <div className=" form-group" data-select2-id="55">
+            {/* {data.category !== undefined ? ( */}
+            <form onSubmit={update}>
+                <div className=" form-group">
+                    <label>Product Name</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        defaultValue={data.productName}
+                        onChange={(e) => setproductName(e.target.value)}
+                    />
+                </div>
+                <div className=" form-group">
+                    <label>Base Price</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        defaultValue={data.baseprice}
+                        onChange={(e) => setBaseprice(e.target.value)}
+                    />
+                </div>
+                <div className=" form-group" data-select2-id="55">
+                    <label>Category</label>
+                    <select
+                        className="form-control select2 select2-hidden-accessible"
+                        data-select2-id="9"
+                        tabindex="-1"
+                        aria-hidden="true"
+                        onChange={(e) => CategoryListOnChangeHandler(e)}
+                    >
+                        {categoryList.map((category) => {
+                            if (category._id !== data.category._id) {
+                                return (
+                                    <option
+                                        value={category._id}
+                                    >
+                                        {category.categoryName}
+                                    </option>
+                                );
+                            }
+                            else {
+                                return (
+                                    <option
+                                        selected
+                                        value={category._id}
+                                    >
+                                        {category.categoryName}
+                                    </option>
+                                )
+                            }
+                        })}
+                    </select>
+                </div>
+                {/* <div className=" form-group" data-select2-id="55">
                         <label>Sub-Category</label>
                         <select
                             className="form-control select2 select2-hidden-accessible"
@@ -180,46 +180,46 @@ export const UpdateProduct = () => {
                         </select>
                     </div> */}
 
-                    <div className=" form-group" data-select2-id="55">
-                        <label>Brand</label>
-                        <select
-                            className="form-control select2 select2-hidden-accessible"
-                            data-select2-id="9"
-                            tabindex="-1"
-                            aria-hidden="true"
-                            onChange={(e) => {
-                                BrandOnChangeHandler(e);
-                            }}
-                        >
+                <div className=" form-group" data-select2-id="55">
+                    <label>Brand</label>
+                    <select
+                        className="form-control select2 select2-hidden-accessible"
+                        data-select2-id="9"
+                        tabindex="-1"
+                        aria-hidden="true"
+                        onChange={(e) => {
+                            BrandOnChangeHandler(e);
+                        }}
+                    >
 
-                            {brandList.map((brand) => {
-                                if (brand._id !== data.brand._id) {
-                                    return (<option
-                                        value={brand._id}
-                                    >{brand.brandName}</option>)
-                                } else {
-                                    return (<option selected="selected"
-                                        value={brand._id}
-                                    >{brand.brandName}</option>)
-                                };
-                            })}
-                        </select>
-                    </div>
-                    <div className=" form-group">
-                        <label>Img</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            defaultValue={data.baseprice}
-                            onChange={(e) => setimg(e.target.value)}
-                        />
-                    </div>
-                    <button type="submit" class="btn btn-primary">
-                        Submit
-                    </button>
-                </form>
-            ) : ("Loading....")
-            }
+                        {brandList.map((brand) => {
+                            if (brand._id !== data.brand._id) {
+                                return (<option
+                                    value={brand._id}
+                                >{brand.brandName}</option>)
+                            } else {
+                                return (<option selected="selected"
+                                    value={brand._id}
+                                >{brand.brandName}</option>)
+                            };
+                        })}
+                    </select>
+                </div>
+                <div className=" form-group">
+                    <label>Img</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        defaultValue={data.img}
+                        onChange={(e) => setimg(e.target.value)}
+                    />
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    Submit
+                </button>
+            </form>
+            {/* ) : ("Loading....")
+            } */}
         </div>
     );
 };
