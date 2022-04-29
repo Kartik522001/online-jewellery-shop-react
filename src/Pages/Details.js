@@ -10,16 +10,23 @@ import axios from 'axios'
 const Details = () => {
     var id = useParams().productId;
     const [productList, setproductList] = useState([]);
-
+    var [userId, setuserId] = useState('')
     const getData = async (_id) => {
         await axios.get(`http://localhost:4001/productslist/${id}`).then((res) => {
             console.log(res.data.data);
             setproductList(res.data.data);
+            localStorage.setItem('productName', res.data.data.productName);
+            localStorage.setItem('baseprice', res.data.data.baseprice);
         });
     };
 
+    // const getlocalStorageData = async () => {
+    //     var id = localStorage.setItem("productId")
+    //     // setuserId(id)
+    // }
     useEffect(() => {
         getData();
+        // getlocalStorageData();
     }, [])
     return (
         <>

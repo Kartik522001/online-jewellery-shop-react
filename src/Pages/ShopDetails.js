@@ -13,7 +13,7 @@ const ShopDetails = () => {
     const [productList, setproductList] = useState([]);
 
     const getData = async () => {
-        await axios.get(`http://localhost:4001/products/${id}`).then((res) => {
+        await axios.get(`http://localhost:4001/productone/${id}`).then((res) => {
             console.log(res.data.data);
             setproductList(res.data.data);
         });
@@ -36,7 +36,7 @@ const ShopDetails = () => {
                 </div>
             </div>
             <div className="col-lg-9 col-md-12">
-                <div className="row pb-3">
+                <div className="row pb-3" style={{ position: 'relative', left: '180px' }}>
                     {productList.map((product) => {
                         return (
                             <>

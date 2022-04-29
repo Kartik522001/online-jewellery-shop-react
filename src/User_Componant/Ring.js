@@ -9,6 +9,7 @@ import axios from 'axios'
 
 const Home = () => {
     // var id = useParams().productId;
+    // var [userId, setuserId] = useState('')
     const [productList1, setproductList1] = useState([]);
     const [productList2, setproductList2] = useState([]);
     const [productList3, setproductList3] = useState([]);
@@ -23,7 +24,7 @@ const Home = () => {
         await axios.get(`http://localhost:4001/productslist/625d8dc4e58cba21ede441fb`).then((res) => {
             console.log(res.data.data);
             setproductList2(res.data.data);
-            localStorage.setItem("email", res.data.data.productName);
+            // localStorage.setItem("email", res.data.data.productName);
         });
     };
     const getData2 = async () => {
@@ -33,10 +34,16 @@ const Home = () => {
         });
     };
 
+    // const getlocalStorageData = async () => {
+    //     var id = localStorage.setItem("productId")
+    //     // setuserId(id)
+    // }
+
     useEffect(() => {
         getData();
         getData2();
         getData1();
+        // getlocalStorageData();
     }, [])
     return (
         <>

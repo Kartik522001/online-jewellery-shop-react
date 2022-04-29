@@ -6,20 +6,24 @@ import '../_css/style.css'
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 const Cart = () => {
-    var id = useParams().productId;
-    const [productList, setproductList] = useState([]);
+    var [productName, setproductName] = useState('')
+    var [baseprice, setbaseprice] = useState('')
 
-    const getData = async (_id) => {
-        await axios.get(`http://localhost:4001/productslist/${id}`).then((res) => {
-            console.log(res.data.data);
-            setproductList(res.data.data);
-            localStorage.getItem(res.data.data.productName)
-        });
-    };
+    const getlocalStorageData = async () => {
+        var productName = localStorage.getItem("productName");
+        var baseprice = localStorage.getItem("baseprice");
+        productName = productName;
+        baseprice = baseprice;
+        // alert(email)
+    }
+
+
 
     useEffect(() => {
-        getData();
-    }, [])
+        setproductName(localStorage.getItem("productName"))
+        setbaseprice(localStorage.getItem("baseprice"))
+        getlocalStorageData()
+    })
     return (
         <>
             <NavBar />
@@ -46,10 +50,10 @@ const Cart = () => {
                             </thead>
                             <tbody class="align-middle">
                                 <tr>
-                                    <td class="align-middle"><img src="img/product-1.jpg" alt="" style={{ width: "50px" }} /> {productList.productName}</td>
-                                    <td class="align-middle">${productList.baseprice}</td>
+                                    <td class="align-middle"><img src="img/product-1.jpg" alt="" style={{ width: "50px" }} /> {productName}</td>
+                                    <td class="align-middle">${baseprice}</td>
 
-                                    <td class="align-middle">${productList.baseprice}</td>
+                                    <td class="align-middle">${baseprice}</td>
                                 </tr>
 
                             </tbody>
@@ -71,16 +75,16 @@ const Cart = () => {
                             <div class="card-body">
                                 <div class="d-flex justify-content-between mb-3 pt-1">
                                     <h6 class="font-weight-medium">Subtotal</h6>
-                                    <h6 class="font-weight-medium">${productList.baseprice}</h6>
+                                    <h6 class="font-weight-medium">${baseprice}</h6>
                                 </div>
 
                             </div>
                             <div class="card-footer border-secondary bg-transparent">
                                 <div class="d-flex justify-content-between mt-2">
                                     <h5 class="font-weight-bold">Total</h5>
-                                    <h5 class="font-weight-bold">${productList.baseprice}</h5>
+                                    <h5 class="font-weight-bold">${baseprice}</h5>
                                 </div>
-                                <Link to={`/checkout/${productList._id}`} class="btn btn-block btn-primary my-3 py-3">Proceed To Checkout</Link>
+                                <Link to={`/checkout/`} class="btn btn-block btn-primary my-3 py-3">Proceed To Checkout</Link>
                             </div>
                         </div>
                     </div>
