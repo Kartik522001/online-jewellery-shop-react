@@ -6,23 +6,25 @@ import '../_css/style.css'
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 const Cart = () => {
-    var [productName, setproductName] = useState('')
-    var [baseprice, setbaseprice] = useState('')
+    // var id = useParams().userId;
+    var id = localStorage.getItem('userId')
+    // console.log("Id--", id);
 
-    const getlocalStorageData = async () => {
-        var productName = localStorage.getItem("productName");
-        var baseprice = localStorage.getItem("baseprice");
-        productName = productName;
-        baseprice = baseprice;
-        // alert(email)
-    }
+    var [cartList, setcart] = useState([]);
 
+
+    const getData = () => {
+        axios.get(`http://localhost:4001/cartone/${id}`).then((res) => {
+            // console.log(res.data.data);
+            setcart(res.data.data);
+
+
+        });
+    };
 
 
     useEffect(() => {
-        setproductName(localStorage.getItem("productName"))
-        setbaseprice(localStorage.getItem("baseprice"))
-        getlocalStorageData()
+        getData();
     })
     return (
         <>
@@ -49,12 +51,19 @@ const Cart = () => {
                                 </tr>
                             </thead>
                             <tbody class="align-middle">
-                                <tr>
-                                    <td class="align-middle"><img src="img/product-1.jpg" alt="" style={{ width: "50px" }} /> {productName}</td>
-                                    <td class="align-middle">${baseprice}</td>
+                                {cartList.map((cart1) => {
+                                    return (
+                                        <>
+                                            <tr>
+                                                <td class="align-middle"><img src="img/product-1.jpg" alt="" style={{ width: "50px" }} /> {cart1.productName}</td>
+                                                <td class="align-middle">${cart1.baseprice}</td>
 
-                                    <td class="align-middle">${baseprice}</td>
-                                </tr>
+                                                <td class="align-middle">${cart1.baseprice}</td>
+                                            </tr>
+
+                                        </>
+                                    )
+                                })}
 
                             </tbody>
                         </table>
@@ -72,20 +81,36 @@ const Cart = () => {
                             <div class="card-header bg-secondary border-0">
                                 <h4 class="font-weight-semi-bold m-0">Cart Summary</h4>
                             </div>
+                            {/* {cartList.map((cart1) => {
+                                return (
+                                    <> */}
+
                             <div class="card-body">
                                 <div class="d-flex justify-content-between mb-3 pt-1">
                                     <h6 class="font-weight-medium">Subtotal</h6>
-                                    <h6 class="font-weight-medium">${baseprice}</h6>
+                                    {cartList.map((cart1) => {
+                                        return (
+
+                                            <>
+                                                <tr>
+                                                    <td class="align-middle">${ }</td>
+                                                </tr>
+                                            </>
+                                        )
+                                    })}
                                 </div>
 
                             </div>
                             <div class="card-footer border-secondary bg-transparent">
                                 <div class="d-flex justify-content-between mt-2">
                                     <h5 class="font-weight-bold">Total</h5>
-                                    <h5 class="font-weight-bold">${baseprice}</h5>
+                                    <h5 class="font-weight-bold">${ }</h5>
                                 </div>
                                 <Link to={`/checkout/`} class="btn btn-block btn-primary my-3 py-3">Proceed To Checkout</Link>
                             </div>
+                            {/* </>
+                                )
+                            })} */}
                         </div>
                     </div>
                 </div>

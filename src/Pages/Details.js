@@ -11,14 +11,37 @@ const Details = () => {
     var id = useParams().productId;
     const [productList, setproductList] = useState([]);
     var [userId, setuserId] = useState('')
+    var productName, baseprice, user;
     const getData = async (_id) => {
         await axios.get(`http://localhost:4001/productslist/${id}`).then((res) => {
             console.log(res.data.data);
             setproductList(res.data.data);
-            localStorage.setItem('productName', res.data.data.productName);
-            localStorage.setItem('baseprice', res.data.data.baseprice);
+            productName = res.data.data.productName
+            baseprice = res.data.data.baseprice
+            user = localStorage.getItem('userId')
+
+            var data = {
+                productName: productName,
+                baseprice: baseprice,
+                user: user
+            }
+            axios.post(`http://localhost:4001/cards`, data).then((res) => {
+                console.log(res.data.data);
+            })
         });
     };
+
+    // const add = () => {
+    //     var data = {
+    //         productName: productName,
+    //         baseprice: baseprice
+    //     }
+    //     axios.post(`http://localhost:4001/cards`, data).then((res) => {
+    //         console.log(res.data.data);
+    //     })
+    // }
+
+
 
     // const getlocalStorageData = async () => {
     //     var id = localStorage.setItem("productId")
@@ -85,7 +108,9 @@ const Details = () => {
                         {/* <p className="mb-4">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc invidunt ipsum et, labore clita lorem magna lorem ut. Erat lorem duo dolor no sea nonumy. Accus labore stet, est lorem sit diam sea et justo, amet at lorem et eirmod ipsum diam et rebum kasd rebum.</p> */}
                         <div className="d-flex align-items-center mb-4 pt-2">
 
-                            <Link to={`/cart/${productList._id}`} className="btn btn-primary px-3"><i className="fa fa-shopping-cart mr-1"></i>Add To Cart</Link>
+                            <button >
+                                <Link to={`/cart`} className="btn btn-primary px-3"><i className="fa fa-shopping-cart mr-1"></i>Add To Cart</Link>
+                            </button>
                         </div>
                         <div className="d-flex pt-2">
                             <p className="text-dark font-weight-medium mb-0 mr-2">Share on:</p>

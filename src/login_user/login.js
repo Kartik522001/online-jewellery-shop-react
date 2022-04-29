@@ -44,6 +44,7 @@ const Login = ({ setLoginUser }) => {
                 localStorage.setItem("email", res.data.data.email);
                 localStorage.setItem("roleName", res.data.data.role.roleName);
                 localStorage.setItem("roleId", res.data.data.role._id)
+                localStorage.setItem("userId", res.data.data._id)
 
                 if (res.data.data.role._id === "62301d5dee1b25e47af7e8cc") {
                     navigate("/admin/*");
