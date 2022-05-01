@@ -33,6 +33,7 @@ import { AddUser } from "../User/AddUser";
 import { GetOrder } from "./Order/GetOrder";
 import { OrderDetails } from "./Order/OrderDetails";
 import { GetContent } from './Order/GetContent';
+import { GetCart } from './Order/GetCart';
 
 
 export const Dashboard = () => {
@@ -94,6 +95,7 @@ export const Dashboard = () => {
                 <Route path='/getorder' element={<GetOrder />} />
                 <Route path='/getcontent' element={<GetContent />} />
                 <Route path='/getorder/getorderdetails/:id' element={<OrderDetails />}></Route>
+                <Route path='/getcart' element={<GetCart />} />
 
             </Routes>
             <Footer />

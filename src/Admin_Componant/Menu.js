@@ -237,6 +237,24 @@ export default class Menu extends Component {
 
                                     </ul>
                                 </li>
+                                <li className="nav-item has-treeview">
+                                    <Link to="/admin/getcart" className="nav-link">
+                                        <i className="nav-icon fas fa-book" />
+                                        <p>
+                                            Cart Details
+                                            <i className="fas fa-angle-left right" />
+                                        </p>
+                                    </Link>
+                                    <ul className="nav nav-treeview">
+                                        <li className="nav-item">
+                                            <Link to='/admin/getcart' className="nav-link">
+                                                <i className="far fa-circle nav-icon" />
+                                                <p>cart List</p>
+                                            </Link>
+                                        </li>
+
+                                    </ul>
+                                </li>
 
 
                             </ul>
