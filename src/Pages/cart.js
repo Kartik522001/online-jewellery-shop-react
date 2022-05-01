@@ -22,6 +22,15 @@ const Cart = () => {
         });
     };
 
+    const DeleteData = (_id) => {
+
+        axios.delete(`http://localhost:4001/cards/${_id}`).then((res) => {
+            alert(res.status);
+            getData();
+        });
+
+    }
+
 
     cartList.map((car) => {
         baseprice = car.baseprice
@@ -54,6 +63,7 @@ const Cart = () => {
                                     <th>Products</th>
                                     <th>Price</th>
                                     <th>Total</th>
+                                    <th>Remove</th>
                                 </tr>
                             </thead>
                             <tbody class="align-middle">
@@ -65,6 +75,7 @@ const Cart = () => {
                                                 <td class="align-middle">${cart1.baseprice}</td>
 
                                                 <td class="align-middle">${cart1.baseprice}</td>
+                                                <td class="align-middle"><button onClick={() => DeleteData(cart1._id)} class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
                                             </tr>
 
                                         </>

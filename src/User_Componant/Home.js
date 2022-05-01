@@ -98,7 +98,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div class="card-footer d-flex justify-content-between bg-light border">
-                                <Link to={`/detail/62546438ac3b2caa532954a2`} class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</Link>
+                                <Link to={`/detail/626b71944cb54ced6709f67d`} class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</Link>
                                 <Link to="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</Link>
                             </div>
                         </div>
